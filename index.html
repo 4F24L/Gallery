@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper{
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* contains all images and headline */
+        .container{
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .container h1{
+            margin-top: 20px 0;
+            margin-bottom: 50px;
+            font-size: 3rem;
+            padding: 2px;
+            color: #000000;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card{
+            width: 32%;
+            position: relative;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card img{
+            height: 100%;
+            width: 100%;
+            filter: grayscale(100%);
+            box-shadow: 0 0 20px #333;
+            object-fit: cover;
+
+        }
+
+        .card:hover{
+            transform: scale(1.04);
+            filter: drop-shadow(0 0 10px #333);
+            transition: 0.5s;
+        }
+
+        .card:hover img{
+            filter: grayscale(0%);
+        }
+
+        .card figcaption{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 9%;
+            padding-left: 20px;
+            font-size: 20px;
+            font-weight: 500;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            opacity: 0;
+            border-radius: 0 0 10px 10px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            transition: 0.5s;
+        }
+
+        .card:hover figcaption{
+            opacity: 1;
+            transform: scale(1.04);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+
+            <h1>FRIENDS</h1>
+            <div class="gallery">
+
+                <figure class="card">
+                    <img src="images/afzal.jpg" alt="afzal">
+                    <figcaption>Afzal (Developer)</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/saklain.jpg" alt="saklain">
+                    <figcaption>Saklain</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/mustak.jpg" alt="mustak">
+                    <figcaption>Mustak</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/rana.jpg" alt="rana">
+                    <figcaption>Rana</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/sakil.jpg" alt="sakil">
+                    <figcaption>Sakil</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/arbaz.jpg" alt="arbaz">
+                    <figcaption>Arbaz</figcaption>
+                </figure>
+                
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
